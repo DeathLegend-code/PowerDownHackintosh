@@ -28,7 +28,7 @@ chmod +x install.sh
 4. Один раз перезагрузи компьютер через меню ``.
 
 ## Credits & Inspiration
-* Идея и концепция вдохновлены проектом [antimodular/direct_shutdown](https://github.com) и сниппетом перехвата `NX_POWER_KEY` от [Akira-Hayasaka](https://github.com).
+* Идея и концепция вдохновлены проектом [antimodular/direct_shutdown](https://github.com/antimodular/direct_shutdown) и сниппетом перехвата `NX_POWER_KEY` от Akira-Hayasaka.
 * Данная реализация написана на чистом Objective-C без сторонних фреймворков и адаптирована для автоматического развёртывания в фоне на современных версиях macOS / Hackintosh.
 
 ## Удаление
