@@ -5,7 +5,7 @@ PLIST_PATH="$HOME/Library/LaunchAgents/com.user.poweroff.plist"
 BIN_PATH="/usr/local/bin/PowerOff"
 
 if [ "$1" == "uninstall" ]; then
-    echo "Удаление Hackintosh Direct PowerOff..."
+    echo "Удаление PowerDown Hackintosh..."
     launchctl unload "$PLIST_PATH" 2>/dev/null || true
     rm -f "$PLIST_PATH"
     sudo rm -f "$BIN_PATH"
