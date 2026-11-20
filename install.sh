@@ -1,6 +1,8 @@
+
 #!/bin/bash
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PLIST_PATH="$HOME/Library/LaunchAgents/com.user.poweroff.plist"
 BIN_PATH="/usr/local/bin/PowerOff"
 
@@ -19,7 +21,7 @@ sudo defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no
 
 echo "2. Компилируем PowerOff..."
 sudo mkdir -p /usr/local/bin
-sudo clang -framework Cocoa PowerOff.m -o "$BIN_PATH"
+sudo clang -framework Cocoa "$SCRIPT_DIR/PowerOff.m" -o "$BIN_PATH"
 
 echo "3. Настраиваем фоновый автозапуск (LaunchAgent)..."
 mkdir -p "$HOME/Library/LaunchAgents"
